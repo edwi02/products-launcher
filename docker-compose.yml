@@ -43,17 +43,18 @@ services:
       - PORT=3002
       - DATABASE_URL=postgresql://postgres:123456@orders-db:5432/ordersdb?schema=public
       - NATS_SERVERS=nats://nats-server:4222
-
-  # Orders DB
-  orders-db:
-    container_name: orders_database
-    image: postgres:16.2
-    restart: always
-    ports:
-      - "5432:5432"
-    volumes:
-      - ./orders-ms/postgres:/var/lib/postgresql/data
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=123456
-      - POSTGRES_DB=ordersdb
+#
+#  # Orders DB
+#  orders-db:
+#    container_name: orders_database
+#    image: postgres:16.2
+#    restart: always
+#    ports:
+#      - "5432:5432"
+#    volumes:
+#      - ./orders-ms/postgres:/var/lib/postgresql/data
+#    environment:
+#      - POSTGRES_USER=postgres
+#      - POSTGRES_PASSWORD=123456
+#      - POSTGRES_DB=ordersdb
+#
